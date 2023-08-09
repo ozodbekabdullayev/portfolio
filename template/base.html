@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+
+<!-- Mirrored from themesdesign.in/joognu/layouts/home-light.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jul 2023 16:22:47 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <title>Joognu | Responsive Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
+    <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
+    <meta content="Themesdesign" name="author" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+    <!-- css -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/materialdesignicons.min.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pe-icon-7-stroke.css"' %}>
+
+    <!-- magnific pop-up -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}" />
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- START HEADER -->
+    <header id="topnav" class="defaultscroll fixed-top navbar-sticky bg-white border-bottom">
+        <div class="container">
+            <!-- Logo container-->
+            <div>
+                <a href="home.html" class="logo text-uppercase">
+                            joognu
+                                          </a>
+            </div>
+            <!-- End Logo container-->
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu">
+
+                    <li class="has-submenu">
+                        <a href="{% url 'dashboard' %}">Home</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="{% url 'portfolio' %}">Portfolio</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="{% url 'blog' %}">Blog</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </li>   
+
+                </ul>
+                <!-- End navigation menu-->
+            </div>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    {% block content %}
+
+    {% endblock content %}
+    
+    <!-- javascript -->
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrollspy.min.js' %}"></script>
+    <!-- Portfolio -->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
+
+    <!-- Typed -->
+    <script src="{% static 'js/typed.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from themesdesign.in/joognu/layouts/home-light.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Jul 2023 16:23:01 GMT -->
+</html>

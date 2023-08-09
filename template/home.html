@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <!-- START HEADING -->
+    <section class="bg-heading bg-light" id="home">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h1><span class="font-weight-300">Hi. We are</span> Joognu.</h1>
+                        <h4 class="font-weight-300 mt-4 line-height_1_4">We are a team of creatives, our biggest
+                                        passion is creating unique <span class="element font-weight-500" data-elements="Themes,Portfolios,Designes"></span></h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END HEADING -->
+
+    <!-- START PORTFOLIO -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <ul class="col container-filter portfolioFilte list-unstyled mb-0" id="filter">
+                            <li><a class="categories active" data-filter="*">All</a></li>
+                            {% for category in categories %}
+                            <li><a class="categories" data-filter=".{{ category.name }}">{{ category.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="port portfolio-masonry mt-4">
+                <div class="portfolioContainer row photo">
+                    {% for project in projects %}
+                        <div class="col-lg-4 p-4 {{ project.category.name }}">
+                            <div class="item-box">
+                                <a class="mfp-image" href="{% url 'portfolio-detail' project.id %}" title="Project Name">
+                                    <img class="item-container img-fluid" src="{{ project.photo.url }}" alt="work-img" />
+                                    <div class="item-mask">
+                                        <div class="item-caption">
+                                            <p class="text-dark mb-0">{{ project.category.name }}</p>
+                                            <h6 class="text-dark mt-1 text-uppercase">{{ project.title }}</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END PORTFOLIO -->
+
+   <!-- START CONTACT -->
+   <section class="section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="text-center mt-4">
+                    <div class="services-img">
+                        <img src="images/icons/spaceship.png" alt="">
+                    </div>
+                    <h6 class="mt-4">4514 West Street Helena</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="text-center mt-4">
+                    <div class="services-img">
+                        <img src="images/icons/mobilepay.png" alt="">
+                    </div>
+                    <h6 class="mt-4">+001 406-471-0400</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="text-center mt-4">
+                    <div class="services-img">
+                        <img src="images/icons/earth.png" alt="">
+                    </div>
+                    <h6 class="mt-4">Candiarity@joapide.com</h6>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- END CONTACT -->
+
+<!-- FOOTER-ALT -->
+<footer class="pt-1 pb-1 bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pt-4 pb-4 text-center">
+                    <p class="text-white mb-0">2021 © Joognu</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- FOOTER-ALT -->
+{% endblock content %}
